@@ -1,4 +1,4 @@
 .vimrc
 ======
 
-~/.vim and ~/.vimrc
+ vim config file ~/.vimrc
