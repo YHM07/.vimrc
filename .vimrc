@@ -196,7 +196,7 @@ Bundle 'vimprj'
 Bundle 'winmanager'
 Bundle 'AutoComplPop'
 Bundle 'vimwiki'
-
+Bundle 'awk-support.vim'
 " Bundle 'ZenCoding'
 
 " Git plugin not hosted on GitHub
