@@ -248,15 +248,15 @@ imap <F3> <ESC>:NERDTreeToggle<CR>
 " plugin - DoxygenToolkit.vim 
 " 由注释生成文档，并且能够快速生成函数标准注释
 "-------------------------------------------------------------------------
-let g:DoxygenToolkit_authorName            = "H.M.Yang"
+let g:DoxygenToolkit_authorName            = "H.M.Yang,hmyang07@gmail.com"
 let g:DoxygenToolkit_briefTag_funcName     = "yes"
 let g:DoxygenToolkit_undocTag              = "DOXIGEN_SKIP_BLoCK"
 let g:DoxygenToolkit_briefTag_pre          = "@brief  "
 let g:DoxygenToolkit_paramTag_pre          = "@param  "
 let g:DoxygenToolkit_returnTag             = "@return  "
 let g:DoxygenToolkit_maxFunctionProtoLines = 30
-let g:DoxygenToolkit_blockHeader="-------------------------------------------------------------------------"
-let g:DoxygenToolkit_blockFooter="-------------------------------------------------------------------------"
+"let g:DoxygenToolkit_blockHeader="-------------------------------------------------------------------------"
+"let g:DoxygenToolkit_blockFooter="-------------------------------------------------------------------------"
 map <leader>da :DoxAuthor<CR>
 map <leader>df :Dox<CR>
 map <leader>db :DoxBlock<CR>
