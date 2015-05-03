@@ -305,6 +305,7 @@ let OmniCpp_DefaultNamespaces   = ["std","_GLIBCXX_STD"]
 let OmniCpp_ShowScopeInAbbr     = 1 			" show scope in abbreviation and remove the last column
 let OmniCpp_ShowAccess          = 1 
 au  CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
+set tags+=~/.vim/tags/stdcpp.tags
 "-------------------------------------------------------------------------
 
 "-------------------------------------------------------------------------
