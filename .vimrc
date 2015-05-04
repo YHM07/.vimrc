@@ -346,7 +346,7 @@ let g:Powerline_symblos = 'fancy'
 " plugin - taglist.vim 
 " 查看函数列表等
 "-------------------------------------------------------------------------
-set tags=tags;
+"set tags=tags;
 set autochdir
 "TagList(ctags)
 "------------------------------------------------------------------
