@@ -39,7 +39,7 @@ hi Pmenu ctermfg = 0 ctermbg = 5 guibg = LightMagenta
 " 修改下拉菜单选中条目颜色
 hi PmenuSel ctermfg = 0 ctermbg = 7 guibg = Gray
 
-set number							" 显示行号
+set number							" 显示行号
 set cursorline 						" 突出显示当前行
 " 设置缩进
 set shiftwidth  =4 					" 设定 << 和 >> 命令移动时的宽度为 4
@@ -78,7 +78,7 @@ set statusline =\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ %c
 " 打开文件时自动跳转到关闭文件时，光标所在位置
 if has("autocmd")
 	  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-endif 
+endif 
 
 " -----------------------------------------------------------------------------
 " 编程相关设置
@@ -289,7 +289,15 @@ smap <silent> <C-e> <Plug>(neocomplcache_snippets_expand)
 au BufNewFile,BufRead,BufEnter *.cpp,*.hpp,*c set omnifunc=omni#cpp#complete#Main
 "autocmd FileType cpp set omnifunc=cppcomplete#CompleteCPP
 map <C-F12> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR>:TlistUpdate<CR>
-"imap <F12> <ESC> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR>:TlistUpdate<CR>   
+"imap <F12> <ESC> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR>:TlistUpdate<CR>  
+" 以下命令在终端运行生成tags文件，并放在～/.vim/tags/目录下。然后，设置～/.vimrc文件。
+" 利用以下命令生成/usr/include目录下文件的tags文件
+"  cd /usr/include 
+"  ctags -R --c-kinds=+l+x+p --fields=+iaSl --extra=+q  -I __THROW,__nonnull -f ~/.vim/tags/sys.tags
+“ 生成c++库文件的tags文件,可以下载c++库文件，或者使用/usr/include/c++/4.8目录文件，然后运行以下命令
+”  cd /usr/include/c++/4.8
+"  ctags -R --c++-kinds=+l+x+p --fields=+iaSl --extra=+q --language-force=c++ -f ~/.vim/tags/stdcpp.tags
+” 以上命令参考：https://github.com/yangyangwithgnu/use_vim_as_ide#5.4.1
 "set nocp
 set omnifunc                    =syntaxcomplete#Complete
 set completeopt                 =menu,menuone	"关掉智能补全时的预览窗口
@@ -306,6 +314,7 @@ let OmniCpp_ShowScopeInAbbr     = 1 			" show scope in abbreviation and remove t
 let OmniCpp_ShowAccess          = 1 
 au  CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 set tags+=~/.vim/tags/stdcpp.tags
+set tags+=~/.vim/tags/sys.tags
 "-------------------------------------------------------------------------
 
 "-------------------------------------------------------------------------
