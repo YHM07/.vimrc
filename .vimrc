@@ -294,8 +294,8 @@ map <C-F12> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .<CR><
 " 利用以下命令生成/usr/include目录下文件的tags文件
 "  cd /usr/include 
 "  ctags -R --c-kinds=+l+x+p --fields=+iaSl --extra=+q  -I __THROW,__nonnull -f ~/.vim/tags/sys.tags
-“ 生成c++库文件的tags文件,可以下载c++库文件，或者使用/usr/include/c++/4.8目录文件，然后运行以下命令
-”  cd /usr/include/c++/4.8
+" 生成c++库文件的tags文件,可以下载c++库文件，或者使用/usr/include/c++/4.8目录文件，然后运行以下命令
+"  cd /usr/include/c++/4.8
 "  ctags -R --c++-kinds=+l+x+p --fields=+iaSl --extra=+q --language-force=c++ -f ~/.vim/tags/stdcpp.tags
 ” 以上命令参考：https://github.com/yangyangwithgnu/use_vim_as_ide#5.4.1
 "set nocp
